@@ -12,9 +12,3 @@ save as -2.8mm to be adjoining the bed.
 2) Edit Printer definition file:
 C:\Program Files\UltiMaker Cura 5.2.2\share\cura\resources\definitions
 anet3d_a8.def.json
-
-************************************************
-User Configuration folder
-C:\Users\helak\AppData\Roaming\cura\5.2\definition_changes
-Anet+A8+Glass+Bed_settings.inst.cfg
-definition = custom -> definition = anet3d_a8
