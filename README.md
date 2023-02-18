@@ -3,7 +3,7 @@ How to create a logo on your 3D printer bed when using Cura. Note: The logo will
 
 Add Logo to Cura Anet A8 3D Printer
 
-1) Place STL (220x220x3 - 2.8) in:
+1) Place STL (220x220x3) in:
 C:\Program Files\UltiMaker Cura 5.2.2\share\cura\resources\meshes
 Anet_A8_220x220.stl
 
