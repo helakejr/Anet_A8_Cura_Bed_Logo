@@ -1,16 +1,18 @@
 # Cura-Anet_A8_Bed_Logo
 How to create a logo on your 3D printer bed when using Cura. Note: The logo will not print as part of your model.
 
-Add Logo to Cura Anet A8 3D Printer
+Add Logo to ANet A8 3D Printer
 
-1) Place STL (220x220x3) in:
-C:\Program Files\UltiMaker Cura 5.2.2\share\cura\resources\meshes\Anet_A8_220x220.stl
+1) Place new mesh (STL) (220x220x3 - 2.8) in:
+C:\Program Files\UltiMaker Cura 5.2.2\share\cura\resources\meshes
 
-save as -2.8mm to be adjoining the bed.
+Edit Anet_A8_220x220.stl in cura to set offsets to X=0, Y=0, Z=-2.8mm to be adjoining the bed.
+Export to: C:\Program Files\UltiMaker Cura 5.2.2\share\cura\resources\meshes\net_A8_220x220.stl
 
-2) Edit Printer definition file to include stl: where xxxxx is your user account @
-2.a) C:\Program Files\UltiMaker Cura 5.7.1\share\cura\resources\definitions and @
-2.b) C:\Users\xxxxx\AppData\Roaming\cura\5.7\definitions\anet3d_a8.def.json
+2) Edit Printer definition file:
+2A) C:\Program Files\UltiMaker Cura 5.2.2\share\cura\resources\definitions\anet3d_a8.def.json and
+edit contents to
+************************************************
 {
     "version": 2,
     "name": "Anet A8",
@@ -32,8 +34,17 @@ save as -2.8mm to be adjoining the bed.
         "machine_end_gcode": { "default_value": "M104 S0\nM140 S0\nG92 E0\nG1 E-10 F2000\nG28 X0 Y0\nM84"}
     }
 }
+************************************************
+User Configuration folder
+************************************************
+2B)Copy anet3d_a8.def.json file from 2A to C:\Users\xxxxx\AppData\Roaming\cura\5.2\definitions\anet3d_a8.def.json
 
-3. Edit Machine Instance File:
-C:\Users\xxxxx\AppData\Roaming\cura\5.7\machine_instances\Anet+A8+Glass+Bed.global.cfg
-[containers] should be
+3) Edit Printer Definition Confifuration file @ C:\Users\xxxxx\AppData\Roaming\cura\5.2\definition_changes\Anet+A8+xxxxxx_settings.inst.cfg to
+definition = anet3d_a8
+
+4) Edit desired global configuration file @ C:\Users\xxxxx\AppData\Roaming\cura\5.2\machine_instances\Anet+A8+xxxxxx.global.cfg to
+************************************************
+[containers]
+ooo
 7 = anet3d_a8
+************************************************
